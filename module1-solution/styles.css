@@ -1,0 +1,15 @@
+.redFont{
+  color:#ff0000;
+}
+
+.greenFont{
+  color:#339933;
+}
+
+.redBorder{
+  border: 1px solid #ff0000;
+}
+
+.greenBorder{
+  border: 1px solid #339933;
+}
