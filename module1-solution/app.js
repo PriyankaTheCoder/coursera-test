@@ -19,12 +19,12 @@ function LunchCheckController($scope){
         }
       }
       if(lunchItems.length <= 3){
-        $scope.message = "Enjoy";
+        $scope.message = "Enjoy!";
       }else{
-        $scope.message = "Too much";
+        $scope.message = "Too much!";
       }
     }else{
-      $scope.message = "Please enter data first";
+      $scope.message = "Please enter data first!";
     }
   };
 

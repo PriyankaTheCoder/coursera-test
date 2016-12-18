@@ -13,3 +13,13 @@
 .greenBorder{
   border: 1px solid #339933;
 }
+
+.inputStr{
+  width: 60%;
+  height:1.6rem;
+}
+
+.btn{
+  width:30%;
+  height:1.5rem;
+}
