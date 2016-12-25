@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app = "ShoppingListCheckOff">
+<head>
+  <meta charset="utf-8">
+  <title>Check Off Shopping List</title>
+  <script src="angular.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src ="app.js"></script>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row" ng-controller='ToBuyController as toBuyItems' >
+      <div class="col-sm-4">
+        <h1 class="text-info">To Buy</h1>
+
+        <ol>
+          <li ng-repeat='item in toBuyItems.items' class="list-group-item">
+              Buy {{item.quantity}} {{item.name}}
+            <button ng-click='toBuyItems.bought($index)' class="btn btn-primary btnPos">Bought</button>
+          </li>
+        </ol>
+        <div ng-if="toBuyItems.items.length===0" class="lead text-primary">{{toBuyItems.message}}</div>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4" ng-controller='AlreadyBoughtController as boughtItems'>
+        <h1 class="text-info">Already Bought</h1>
+        
+        <ol>
+          <li ng-repeat='item in boughtItems.items' class="list-group-item">Bought {{item.quantity}} {{item.name}}</li>
+        </ol>
+        <div ng-if="boughtItems.items.length===0" class="lead text-primary">{{boughtItems.message}}</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
