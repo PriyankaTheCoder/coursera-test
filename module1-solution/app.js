@@ -31,7 +31,7 @@ function LunchCheckController($scope){
 // check the message and change the border color accordingly
   $scope.checkLunchItems = function(message){
     if(message && message !== ""){
-      if(message === "Please enter data first"){
+      if(message === "Please enter data first!"){
         return 'redBorder';
       }else{
         return 'greenBorder';
@@ -42,7 +42,7 @@ function LunchCheckController($scope){
 // check the message and change the font color accordingly
   $scope.checkMessage = function(message){
     if(message && message !== ""){
-      if(message === "Please enter data first"){
+      if(message === "Please enter data first!"){
         return 'redFont';
       }else{
         return 'greenFont';
