@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1 class="text-centered">Check Off Shopping List</h1>
   <div class="container">
     <div class="row" ng-controller='ToBuyController as toBuyItems' >
       <div class="col-sm-4">
-        <h1 class="text-info text-centered">To Buy</h1>
+        <h2 class="text-info text-centered">To Buy</h2>
         <ol>
           <li ng-repeat='item in toBuyItems.items' class="list-group-item">
               Buy {{item.quantity}} {{item.name}}
@@ -25,7 +26,7 @@
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-4" ng-controller='AlreadyBoughtController as boughtItems'>
-        <h1 class="text-info text-centered">Already Bought</h1>
+        <h2 class="text-info text-centered">Already Bought</h2>
         <ol>
           <li ng-repeat='item in boughtItems.items' class="list-group-item">Bought {{item.quantity}} {{item.name}}</li>
         </ol>
