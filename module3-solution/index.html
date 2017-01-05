@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+  <head>
+      <title>Search Menu Items</title>
+      <script src="lib/jquery.min.js"></script>
+      <script src="lib/bootstrap.min.js"></script>
+      <script src="lib/angular.min.js"></script>
+      <script src="app.js"></script>
+      <link rel="stylesheet" href="lib/bootstrap.min.css">
+  </head>
+  <body ng-controller="NarrowItDownController as menu">
+      <div class="container">
+        <h3 class="text-primary">Search Items</h3>
+        <form class="form-inline">
+          <div class="form-group">
+            <input type="text" ng-model="menu.searchedItem" placeholder="search item" class="form-control">
+            <button class="btn btn-primary" ng-click="menu.showFoundItems(menu.searchedItem);">Narrow It Down For Me!</button>
+          </div>
+        </form>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="row">
+            <found-items items = 'menu.found' on-remove="menu.removeItem(index)">
+            </found-items>
+            <h5 class="text-danger" ng-if="menu.message">{{menu.message}}</h5>
+        </div>
+      </div>
+  </body>
+</html>
