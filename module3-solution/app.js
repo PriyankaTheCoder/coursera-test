@@ -63,7 +63,7 @@
       }).then(function(result){
           menuItems = result.data.menu_items;
           menuItems.forEach(function(elem,index){
-              if(elem.description.indexOf(searchItem) !== -1){
+              if(elem.description.indexOf(searchItem) !== -1 && searchItem!== ""){
                 found.push(elem);
               }
           });
