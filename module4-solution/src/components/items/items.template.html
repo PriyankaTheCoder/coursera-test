@@ -1,0 +1,22 @@
+<div>
+    <h5>Category : <b>{{$ctrl.items.category.name}}</b></h5>
+</div>
+<div>
+    <table class="table table-bordered">
+        <caption><p>Menu Items</p></caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in $ctrl.items.menu_items">
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.price_large}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
